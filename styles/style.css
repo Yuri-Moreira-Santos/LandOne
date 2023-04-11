@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root{
+    --escuro: #393646;
+    --claro: #F4EEE0;
+    --cards-background: #6D5D6E;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--escuro);
+}
+
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:nth-child(1){
+    color: var(--claro);
+}
+
+section:nth-child(2){
+    color: var(--escuro);
+    background: var(--claro);
+}
+
+section:nth-child(3){
+    color: var(--claro);
+}
+
+section:nth-child(4){
+    color: var(--escuro);
+    background: var(--claro);
+}
+
+section .container{
+    margin: 100px;
+}
+
+section h1{
+    font-size: 120px;
+}
+
+section h2{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .cards{
+    display: flex;
+}
+
+section .cards .textCard{
+    background: var(--cards-background);
+    margin: 20px;
+    padding: 20px;
+}
+
+section .cards .textCard h3{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 900px){
+    section h1{
+        font-size: 40px;
+    }
+    
+    section .cards{
+        flex-direction: column;
+    }
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}

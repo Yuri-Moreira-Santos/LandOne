@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro test para mozi</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+    <section>
+        <h1>Site Grandão</h1>
+    </section>
+    <section>
+        <div class="contanier reveal">
+            <h2>Title</h2>
+            <div class="cards">
+                <div class="textCard">
+                    <h3>Sub title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit diam quis interdum
+                        ornare. Nulla quis elit sit amet est blandit cursus at nec neque.</p>
+                </div>
+                <div class="textCard">
+                    <h3>Sub title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit diam quis interdum
+                        ornare. Nulla quis elit sit amet est blandit cursus at nec neque.</p>
+                </div>
+                <div class="textCard">
+                    <h3>Sub title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit diam quis interdum
+                        ornare. Nulla quis elit sit amet est blandit cursus at nec neque.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="contanier reveal">
+            <h2>Title</h2>
+            <div class="cards">
+                <div class="textCard">
+                    <h3>Sub title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit diam quis interdum
+                        ornare. Nulla quis elit sit amet est blandit cursus at nec neque.</p>
+                </div>
+                <div class="textCard">
+                    <h3>Sub title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit diam quis interdum
+                        ornare. Nulla quis elit sit amet est blandit cursus at nec neque.</p>
+                </div>
+                <div class="textCard">
+                    <h3>Sub title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit diam quis interdum
+                        ornare. Nulla quis elit sit amet est blandit cursus at nec neque.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container reveal">
+            <h2>Title</h2>
+            <div class="cards">
+                <div class="textCard">
+                    <h3>Sub title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit diam quis interdum
+                        ornare. Nulla quis elit sit amet est blandit cursus at nec neque.</p>
+                </div>
+                <div class="textCard">
+                    <h3>Sub title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit diam quis interdum
+                        ornare. Nulla quis elit sit amet est blandit cursus at nec neque.</p>
+                </div>
+                <div class="textCard">
+                    <h3>Sub title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit diam quis interdum
+                        ornare. Nulla quis elit sit amet est blandit cursus at nec neque.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+    window.addEventListener("scroll", reveal);
+
+    function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+
+        for(var i = 0; i < reveals.length; i++){
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+
+            if(revealtop < windowheight - revealpoint){
+                reveals[i].classList.add('active');
+            }
+            else{
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+    </script>
+
+</body>
+</html>
